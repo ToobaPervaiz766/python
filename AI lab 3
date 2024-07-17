@@ -1,0 +1,45 @@
+#Question no 1:
+# List to store the numbers
+numbers = []
+
+# Loop through the range 1500 to 2700 (both inclusive)
+for num in range(1500, 2701):
+    # Check if the number is divisible by 7 and a multiple of 5
+    if num % 7 == 0 and num % 5 == 0:
+        numbers.append(num)
+
+# Print the resulting numbers
+print("Numbers divisible by 7 and multiple of 5 between 1500 and 2700 are:", numbers)
+
+#question no 2:
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
+
+celsius_temp = float(input("Enter temperature in Celsius: "))
+converted_fahrenheit = celsius_to_fahrenheit(celsius_temp)
+print(f"{celsius_temp:.2f}°C is equivalent to {converted_fahrenheit:.2f}°F")
+
+fahrenheit_temp = float(input("Enter temperature in Fahrenheit: "))
+converted_celsius = fahrenheit_to_celsius(fahrenheit_temp)
+print(f"{fahrenheit_temp:.2f}°F is equivalent to {converted_celsius:.2f}°C")
+
+#questuion no 3:
+import random
+
+# Generate a random number between 1 and 9
+target_num = random.randint(1, 9)
+
+while True:
+     #Prompt the user to input a guess
+    guess_num = int(input("Guess a number between 1 and 9: "))
+    
+    if guess_num == target_num:
+        print("Well guessed!")
+        break
+    else:
+        print("Incorrect! Try again.\n")
